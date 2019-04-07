@@ -1,0 +1,16 @@
+<div>
+    <h1>Sample for go with webassembly unsing vogu</h1>
+    <section>
+        <button @click="data.Toggle()">Test</button>
+        <div vg-if="data.Show">Show / Hide</div>
+    </section>
+</div>
+
+<style>
+.my-first-vugu-comp { background: #eee; }
+</style>
+
+<script type="application/x-go">
+type RootData struct { Show bool }
+func (data *RootData) Toggle() { data.Show = !data.Show }
+</script>
